@@ -199,7 +199,6 @@
 		flex-direction: column;
 		margin: 3rem 15rem;
 		font-size: larger;
-		font-family: Ubuntu, Arial, sans-serif;
 		text-align: justify;
 		align-items: center;
 
