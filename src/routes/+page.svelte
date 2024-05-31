@@ -1,3 +1,27 @@
+<script lang="ts">
+	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
+	import ArrowUp from 'carbon-icons-svelte/lib/ArrowUp.svelte';
+
+	let showScrollButton = false;
+
+	function scrollToTop() {
+		if (browser) {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
+	}
+
+	onMount(() => {
+		window.onscroll = () => {
+			if (window.scrollY > 30) {
+				showScrollButton = true;
+			} else {
+				showScrollButton = false;
+			}
+		};
+	});
+</script>
+
 <div class="container">
 	<p>
 		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -164,6 +188,9 @@
 		nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
 		nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
 	</p>
+	{#if showScrollButton}
+		<button on:click={scrollToTop}><ArrowUp size={32} /></button>
+	{/if}
 </div>
 
 <style lang="scss">
@@ -173,7 +200,28 @@
 		margin: 3rem 15rem;
 		font-size: larger;
 		font-family: Ubuntu, Arial, sans-serif;
-        text-align: justify;
+		text-align: justify;
+		align-items: center;
+
+		button {
+			position: sticky;
+			bottom: 2rem;
+			height: 50px;
+			width: 50px;
+			background-color: white;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		button:hover {
+			box-shadow: 0 0 10px -3px black;
+		}
+	}
+
+	@media screen and (max-width: 1400px) {
+		.container {
+			margin: 3.5rem 6.5rem;
+		}
 	}
 
 	@media screen and (max-width: 600px) {
