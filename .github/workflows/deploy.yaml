@@ -1,0 +1,54 @@
+name: Deploy
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build-docker:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Build docker image
+        run: docker build -t joa:latest .
+      - name: Save Docker Image
+        run: docker save -o joa.tar joa:latest
+      - name: Upload Image as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: docker-image
+          path: ./joa.tar
+          retention-days: 1
+
+  upload-image:
+    name: upload image
+    runs-on: ubuntu-latest
+    needs: build-docker
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: docker-image
+      - uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY}}
+          source: ./joa.tar
+          target: ~/
+
+  run-deploy-script:
+    name: Run Deploy Script
+    runs-on: ubuntu-latest
+    needs: upload-image
+    steps:
+      - uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            ./deploy-joa.sh
+

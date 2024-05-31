@@ -1,0 +1,16 @@
+/.idea
+/node_modules
+/build
+/.svelte-kit
+/package
+/.git
+.dockerignore
+.env
+.env.*
+.eslintignore
+.eslintrc.cjs
+.gitignore
+.prettierignore
+.prettierrc
+Dockerfile
+README.md
