@@ -1,1 +1,5 @@
-// place files you want to import through the `$lib` alias in this folder.
+import Question from './components/Question.svelte';
+import Paragraph from './components/Paragraph.svelte';
+import List from './components/List.svelte';
+
+export { Paragraph, Question, List };

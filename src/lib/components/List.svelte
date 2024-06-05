@@ -1,0 +1,11 @@
+<ul>
+	<slot />
+</ul>
+
+<style lang="scss">
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+</style>
