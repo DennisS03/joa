@@ -30,7 +30,7 @@
 	queere Menschen in verschiedenen Ländern in der EU täglich. Viele dieser Personen haben weiterhin Angst ihre
 	Sexualität in der Öffentlichkeit zu zeigen, aufgrund der Angst, diskriminiert zu werden.
 </h2>
-<h1>PLACEHOLDER IMAGE</h1>
+<enhanced:img src="/src/assets/images/Foto_1.jpg" />
 <Paragraph>
 	Um genauer auf die Situationen in den verschiedenen Ländern zu schauen, haben wir uns drei verschiedene Länder
 	innerhalb der EU rausgesucht, welche die Frage, wie sich das Leben der queeren Personen in den verschiedenen EU
