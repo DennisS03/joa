@@ -30,7 +30,11 @@
 	queere Menschen in verschiedenen Ländern in der EU täglich. Viele dieser Personen haben weiterhin Angst ihre
 	Sexualität in der Öffentlichkeit zu zeigen, aufgrund der Angst, diskriminiert zu werden.
 </h2>
-<enhanced:img src="/src/assets/images/Foto_1.jpg" />
+<enhanced:img
+	src="../../assets/images/Foto_1.jpg"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	class="pic"
+/>
 <Paragraph>
 	Um genauer auf die Situationen in den verschiedenen Ländern zu schauen, haben wir uns drei verschiedene Länder
 	innerhalb der EU rausgesucht, welche die Frage, wie sich das Leben der queeren Personen in den verschiedenen EU
@@ -66,7 +70,11 @@
 	<li>Adoption für gleichgeschlechtliche Paare 2001 in den Niederlanden erlaubt.</li>
 	<li>Hohe Akzeptanz für gleichgeschlechtliche Ehe in den Niederlande 82 prozent</li>
 </List>
-<h1>PLACEHOLDER IMAGE</h1>
+<enhanced:img
+	src="../../assets/images/Foto_2.jpg"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	class="pic"
+/>
 <h4>
 	Um die Lage in den Niederlanden genauer zu verdeutlichen, haben wir mit einem Mann in den Niederlanden gesprochen,
 	welcher Teil der LGTBQ Gemeinschaft ist. Dabei haben wir dem 24 Jährigen Liam drei Fragen gestellt, um die Situation
@@ -101,7 +109,11 @@
 	<br />
 	<span class="author">(von Milan Volkers)</span>
 </Paragraph>
-<h1>PLACEHOLDER IMAGE</h1>
+<enhanced:img
+	src="../../assets/images/Foto_5.jpg"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	class="pic"
+/>
 <h3>Die Lage in Deutschland</h3>
 <List>
 	<li>
@@ -173,7 +185,11 @@
 	Geschlechtsverkehr hatten. Auch wenn sich in Deutschland viel getan hat und vor allem die Jugend inklusiver wird, muss
 	noch einiges in der Gesellschaft und der Gesetzeslage passieren.
 </Paragraph>
-<h1>PLACEHOLDER IMAGE</h1>
+<enhanced:img
+	src="../../assets/images/Foto_4.jpg"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	class="pic"
+/>
 <h4>Ein Bericht von Marie aus Deutschland:</h4>
 <Paragraph
 	>Ein Bericht von Marie aus Deutschland: Marie (weiblich) 26, wohnt mit zwei Mitbewohner:innen in einer WG in Mainz,
@@ -209,7 +225,11 @@
 	</li>
 	<li>Die Darstellung von Homosexualität in Werbung, Büchern auf Bildern oder in Fernsehserien ist verboten</li>
 </List>
-<h1>PLACEHOLDER IMAGE</h1>
+<enhanced:img
+	src="../../assets/images/Foto_3.jpg"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	class="pic"
+/>
 <h4>Trotzdem steigt die Zustimmung zur Gleichgeschlechtlichen Ehe in der Gesellschaft:</h4>
 <List>
 	<li>2006 befürworteten 18% der Bevölkerung die Gleichstellung in der Ehe.</li>
@@ -263,7 +283,11 @@
 	</strong><br />
 	<span class="author">(von Gabriela Brzezon)</span>
 </Paragraph>
-<h1>PLACEHOLDER IMAGE</h1>
+<enhanced:img
+	src="../../assets/images/Foto_3.jpg"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	class="pic"
+/>
 {#if showScrollButton}
 	<button on:click={scrollToTop}><ArrowUp size={32} /></button>
 {/if}
@@ -286,5 +310,14 @@
 
 	button:hover {
 		box-shadow: 0 0 10px -3px black;
+	}
+
+	picture {
+		align-self: center;
+
+		.pic {
+			width: auto;
+			height: auto;
+		}
 	}
 </style>
