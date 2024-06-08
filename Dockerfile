@@ -3,7 +3,7 @@ FROM node:20.11.0-alpine AS builder
 WORKDIR /builder
 
 COPY . .
-
+RUN yarn add sharp --ignore-engines
 RUN yarn --frozen-lockfile
 
 RUN yarn run build
