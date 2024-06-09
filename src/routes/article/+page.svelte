@@ -32,8 +32,8 @@
 </h2>
 <enhanced:img
 	src="../../assets/images/Foto_1.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
+	class="pic landscape"
 />
 <Paragraph>
 	Um genauer auf die Situationen in den verschiedenen Ländern zu schauen, haben wir uns drei verschiedene Länder
@@ -72,8 +72,8 @@
 </List>
 <enhanced:img
 	src="../../assets/images/Foto_2.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
+	class="pic landscape"
 />
 <h4>
 	Um die Lage in den Niederlanden genauer zu verdeutlichen, haben wir mit einem Mann in den Niederlanden gesprochen,
@@ -111,8 +111,8 @@
 </Paragraph>
 <enhanced:img
 	src="../../assets/images/Foto_5.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
+	class="pic portrai"
 />
 <h3>Die Lage in Deutschland</h3>
 <List>
@@ -187,8 +187,8 @@
 </Paragraph>
 <enhanced:img
 	src="../../assets/images/Foto_4.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
+	class="pic landscape"
 />
 <h4>Ein Bericht von Marie aus Deutschland:</h4>
 <Paragraph
@@ -226,9 +226,9 @@
 	<li>Die Darstellung von Homosexualität in Werbung, Büchern auf Bildern oder in Fernsehserien ist verboten</li>
 </List>
 <enhanced:img
-	src="../../assets/images/Foto_3.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	src="../../assets/images/Foto_6.jpg"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
+	class="pic landscape"
 />
 <h4>Trotzdem steigt die Zustimmung zur Gleichgeschlechtlichen Ehe in der Gesellschaft:</h4>
 <List>
@@ -285,8 +285,8 @@
 </Paragraph>
 <enhanced:img
 	src="../../assets/images/Foto_3.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
+	class="pic landscape"
 />
 {#if showScrollButton}
 	<button on:click={scrollToTop}><ArrowUp size={32} /></button>
@@ -303,6 +303,7 @@
 		height: 50px;
 		width: 50px;
 		background-color: white;
+        border: 1px solid black;
 		border-radius: 50%;
 		align-self: center;
 		cursor: pointer;
@@ -314,10 +315,38 @@
 
 	picture {
 		align-self: center;
+	}
 
-		.pic {
-			width: auto;
-			height: auto;
+	.pic {
+		height: auto;
+		width: auto;
+
+		&.landscape {
+			width: 1100px;
+		}
+
+		&.portrai {
+			height: 750px;
+		}
+	}
+
+	@media screen and (max-width: 1080px) {
+		.pic.landscape {
+			width: 800px;
+		}
+
+		.pic.portrai {
+			height: 625px;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.pic.landscape {
+			width: 400px;
+		}
+
+		.pic.portrai {
+			height: 575px;
 		}
 	}
 </style>
