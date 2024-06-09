@@ -6,7 +6,7 @@
 
 <div id="header">
 	<a href="/">Startseite</a>
-	<div>
+	<div class="downloads-and-github">
 		{#if $page.route.id === '/article'}
 			<a href="/article/download?sources=true" download>
 				<Download size={32} />
@@ -26,7 +26,6 @@
 <style lang="scss">
 	#header {
 		display: flex;
-		gap: 1rem;
 		position: sticky;
 		top: 0;
 		height: 50px;
@@ -35,7 +34,6 @@
 		background-color: white;
 		padding: 0 2rem;
 		box-sizing: border-box;
-		align-items: center;
 		justify-content: space-between;
 
 		a {
@@ -48,5 +46,10 @@
 				text-decoration: none;
 			}
 		}
+	}
+
+	.downloads-and-github {
+		display: flex;
+		gap: 1rem;
 	}
 </style>
