@@ -18,6 +18,8 @@ COPY --from=builder /builder/build build
 
 COPY package.json package.json
 COPY yarn.lock yarn.lock
+COPY ./src/assets/Leben-als-queere-Person_Milan_Natalie_Gabi.pdf ./src/assets/Leben-als-queere-Person_Milan_Natalie_Gabi.pdf
+COPY ./src/assets/Quellen_Milan_Natalie_Gabi.pdf ./src/assets/Quellen_Milan_Natalie_Gabi.pdf
 
 RUN yarn --frozen-lockfile --prod
 
