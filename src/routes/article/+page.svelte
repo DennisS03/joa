@@ -226,7 +226,7 @@
 	<li>Die Darstellung von Homosexualität in Werbung, Büchern auf Bildern oder in Fernsehserien ist verboten</li>
 </List>
 <enhanced:img
-	src="../../assets/images/Foto_3.jpg"
+	src="../../assets/images/Foto_6.jpg"
 	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
 	class="pic landscape"
 />
