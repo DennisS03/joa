@@ -6,9 +6,16 @@
 
 <div class="article-container">
 	<ArticleLink headline="Das Leben als queere Person in der EU">
-		Fühlst du dich sicher in deinem Land? Hast du Angst davor gesehen zu werden? Diese Fragen stellen sich viele
-		tausende queere Menschen in verschiedenen Ländern in der EU täglich. Viele dieser Personen haben weiterhin Angst
-		ihre Sexualität in der Öffentlichkeit zu zeigen, aufgrund der Angst, diskriminiert zu werden.
+		<div slot="image">
+			<enhanced:img
+				src="../assets/images/Foto_1.jpg"
+				sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
+				class="image"
+			/>
+		</div>
+		Fühlst du dich sicher in deinem Land? Hast du Angst davor gesehen zu werden? Diese Fragen stellen sich viele tausende
+		queere Menschen in verschiedenen Ländern in der EU täglich. Viele dieser Personen haben weiterhin Angst ihre Sexualität
+		in der Öffentlichkeit zu zeigen, aufgrund der Angst, diskriminiert zu werden.
 	</ArticleLink>
 	<ArticleLink headline="Das Leben als queere Person in der EU">
 		Fühlst du dich sicher in deinem Land? Hast du Angst davor gesehen zu werden? Diese Fragen stellen sich viele
@@ -42,5 +49,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
+		.image {
+            width: 120px;
+            height: auto;
+		}
 	}
 </style>
