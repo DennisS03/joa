@@ -33,7 +33,7 @@
 <enhanced:img
 	src="../../assets/images/Foto_1.jpg"
 	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	class="pic landscape"
 />
 <Paragraph>
 	Um genauer auf die Situationen in den verschiedenen Ländern zu schauen, haben wir uns drei verschiedene Länder
@@ -73,7 +73,7 @@
 <enhanced:img
 	src="../../assets/images/Foto_2.jpg"
 	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	class="pic landscape"
 />
 <h4>
 	Um die Lage in den Niederlanden genauer zu verdeutlichen, haben wir mit einem Mann in den Niederlanden gesprochen,
@@ -112,7 +112,7 @@
 <enhanced:img
 	src="../../assets/images/Foto_5.jpg"
 	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	class="pic portrai"
 />
 <h3>Die Lage in Deutschland</h3>
 <List>
@@ -188,7 +188,7 @@
 <enhanced:img
 	src="../../assets/images/Foto_4.jpg"
 	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	class="pic landscape"
 />
 <h4>Ein Bericht von Marie aus Deutschland:</h4>
 <Paragraph
@@ -228,7 +228,7 @@
 <enhanced:img
 	src="../../assets/images/Foto_3.jpg"
 	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	class="pic landscape"
 />
 <h4>Trotzdem steigt die Zustimmung zur Gleichgeschlechtlichen Ehe in der Gesellschaft:</h4>
 <List>
@@ -286,7 +286,7 @@
 <enhanced:img
 	src="../../assets/images/Foto_3.jpg"
 	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
-	class="pic"
+	class="pic landscape"
 />
 {#if showScrollButton}
 	<button on:click={scrollToTop}><ArrowUp size={32} /></button>
@@ -316,8 +316,16 @@
 		align-self: center;
 
 		.pic {
-			width: auto;
 			height: auto;
+
+			&.landscape {
+				width: 1100px;
+			}
+
+			&.portrai {
+				width: auto;
+				height: 750px;
+			}
 		}
 	}
 </style>
