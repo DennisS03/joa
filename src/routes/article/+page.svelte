@@ -303,6 +303,7 @@
 		height: 50px;
 		width: 50px;
 		background-color: white;
+        border: 1px solid black;
 		border-radius: 50%;
 		align-self: center;
 		cursor: pointer;
