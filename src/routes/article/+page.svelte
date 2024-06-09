@@ -32,7 +32,7 @@
 </h2>
 <enhanced:img
 	src="../../assets/images/Foto_1.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
 	class="pic landscape"
 />
 <Paragraph>
@@ -72,7 +72,7 @@
 </List>
 <enhanced:img
 	src="../../assets/images/Foto_2.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
 	class="pic landscape"
 />
 <h4>
@@ -111,7 +111,7 @@
 </Paragraph>
 <enhanced:img
 	src="../../assets/images/Foto_5.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
 	class="pic portrai"
 />
 <h3>Die Lage in Deutschland</h3>
@@ -187,7 +187,7 @@
 </Paragraph>
 <enhanced:img
 	src="../../assets/images/Foto_4.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
 	class="pic landscape"
 />
 <h4>Ein Bericht von Marie aus Deutschland:</h4>
@@ -227,7 +227,7 @@
 </List>
 <enhanced:img
 	src="../../assets/images/Foto_3.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
 	class="pic landscape"
 />
 <h4>Trotzdem steigt die Zustimmung zur Gleichgeschlechtlichen Ehe in der Gesellschaft:</h4>
@@ -285,7 +285,7 @@
 </Paragraph>
 <enhanced:img
 	src="../../assets/images/Foto_3.jpg"
-	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px)1080px, 1280px"
+	sizes="(max-width:600px) 540px, (max-width:1080px) 768px, (max-width: 1400px) 1080px, 1280px"
 	class="pic landscape"
 />
 {#if showScrollButton}
@@ -314,18 +314,38 @@
 
 	picture {
 		align-self: center;
+	}
 
-		.pic {
-			height: auto;
+	.pic {
+		height: auto;
+		width: auto;
 
-			&.landscape {
-				width: 1100px;
-			}
+		&.landscape {
+			width: 1100px;
+		}
 
-			&.portrai {
-				width: auto;
-				height: 750px;
-			}
+		&.portrai {
+			height: 750px;
+		}
+	}
+
+	@media screen and (max-width: 1080px) {
+		.pic.landscape {
+			width: 800px;
+		}
+
+		.pic.portrai {
+			height: 625px;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.pic.landscape {
+			width: 400px;
+		}
+
+		.pic.portrai {
+			height: 575px;
 		}
 	}
 </style>

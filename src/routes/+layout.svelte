@@ -30,6 +30,7 @@
 	@media screen and (max-width: 600px) {
 		main {
 			margin: 1.5rem 2.5rem;
+			font-size: medium;
 		}
 	}
 </style>
